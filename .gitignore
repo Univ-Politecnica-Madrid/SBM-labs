@@ -1,0 +1,53 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores / IDEs
+.idea/
+*.swp
+
+# Archivos generados al compilar (C / toolchain ARM)
+*.o
+*.obj
+*.elf
+*.hex
+*.map
+*.lib
+*.a
+*.d
+*.lnp
+*.__i
+
+# Keil µVision (carpeta keil/)
+**/keil/Listings/
+**/keil/Objects/
+**/keil/DebugConfig/
+*.uvguix.*
+*.uvoptx
+*.bak
+
+# VS Code / CMSIS-Toolbox (carpeta vc/)
+**/out/
+**/tmp/
+*.cbuild.yml
+*.cbuild-idx.yml
+*.cbuild-run.yml
+*.cbuild-set.yml
+*.cprj
+uv2csolution.log
+.vscode/cmsis.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/settings.json
+
+# RTE generado automáticamente (no la configuración RTE en sí)
+**/RTE/_*/RTE_Components.h
+**/RTE/_*/Pre_Include_*.h
+
+# Logs y temporales
+*.log
+tmp/
+*.tmp
+
+# Quitar MD por el momento
+*.md
