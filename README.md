@@ -1,8 +1,7 @@
 # Prácticas de Sistemas Basados en Microprocesador
 
 > **Este repositorio es un ejemplo.** Aquí puedes ver cómo se organiza un repositorio de prácticas y cómo se usa Git para desarrollarlas, tanto en GitHub como en GitLab. **No vas a trabajar directamente sobre este repositorio**: antes de empezar, crea tu propia copia siguiendo la sección **"Cómo obtener tu propio repositorio"** más abajo.
-
-Plantilla de organización para las prácticas de la asignatura, desarrolladas en **C** sobre microcontrolador, usando **Keil µVision** y **VS Code (CMSIS-Toolbox)**. Cada alumno trabaja en su propia copia de este repositorio (creada como plantilla en GitHub e importada a GitLab), con la misma estructura.
+Las prácticas de la asignatura se desarrollan en lenguaje  **C** sobre un microcontrolador, usando **Keil µVision** o **VS Code (CMSIS-Toolbox)**. Cada alumno trabaja en su propia copia de este repositorio (disponible como plantilla en GitHub), con la misma estructura.
 
 ## Estructura del repositorio
 
@@ -12,11 +11,11 @@ B2/   -> Bloque 2
 B3/   -> Bloque 3
 ```
 
-Cada bloque contiene una o varias prácticas (`P0`, `P1`, `P2`...). Cada práctica es una carpeta independiente con su propio enunciado y, dentro, el código fuente y los proyectos de Keil/VS Code (ver la sección **"Organización de cada práctica"** más abajo).
+Cada bloque contiene una o varias prácticas (`P0`, `P1`, `P2`...). Cada práctica está en una carpeta independiente que contiene el código fuente y el proyecto de Keil o de VS Code (ver la sección **"Organización de cada práctica"** más abajo).
 
 ## Organización de cada práctica
 
-Cada práctica sigue siempre la misma organización interna, pensada para que el mismo código en C se pueda compilar y probar tanto desde **Keil Vision** como desde **VS Code** (con el CMSIS-Toolbox de Arm), sin duplicar el código fuente:
+Cada práctica sigue siempre la misma organización interna, pensada para que el mismo código en C se pueda compilar y probar tanto desde **Keil Vision** como desde **VS Code** (con el CMSIS-Toolbox de Arm), sin duplicar el código fuente (en el futuro está planeado utilizar VC debido a que Keil µVision va a dejar de actualizarse). Por ejemplo la P0 del B1 tiene esta organización:
 
 ```
 P0/
@@ -26,7 +25,7 @@ P0/
  vc/       <- proyecto de VS Code / CMSIS-Toolbox (.csolution.yml, .cproject.yml...)
 ```
 
-- **`src/`**: aquí se escribe el código de la práctica, paso a paso. Es la única carpeta donde se desarrolla la lógica; tanto el proyecto de Keil como el de VS Code compilan los mismos archivos, así que no hay que mantener dos copias del código.
+- **`src/`**: aquí se incluye todo el código de la práctica, paso a paso. Es la única carpeta donde se desarrolla la lógica; tanto el proyecto de Keil como el de VS Code compilan los mismos archivos, así que no hay que mantener dos copias del código.
 - **`keil/`**: contiene el proyecto para abrir y compilar con Keil Vision (MDK-ARM). El archivo principal del proyecto tiene la extensión `.uvprojx`.
 - **`vc/`**: contiene el proyecto para abrir y compilar en VS Code, usando la extensión de Arm CMSIS y el sistema de proyectos `csolution`/`cproject` (archivos `.csolution.yml` y `.cproject.yml`). 
 
