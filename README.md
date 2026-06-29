@@ -123,7 +123,7 @@ El mensaje debe ser breve y describir el cambio real, no algo genérico como "ca
 ```bash
 git push
 ```
-Esto funciona igual tanto si tu repositorio remoto está谩 en GitHub como en GitLab.
+Esto funciona igual tanto si tu repositorio remoto está en GitHub como en GitLab.
 
 Repite este ciclo (`status` `add` `commit` `push`) cada vez que completes un paso. No esperes a tener la práctica completa para hacer tu primer commit.
 
@@ -178,7 +178,7 @@ git pull
 - **No sé en qué carpeta estoy / qué repositorio es este:**
   ```bash
   pwd                  # muestra la carpeta actual
-  git remote -v        # muestra a qué repositorio remoto está谩 conectado
+  git remote -v        # muestra a qué repositorio remoto estás conectado
   ```
 
 ### 9. Resumen de comandos esenciales
@@ -196,7 +196,7 @@ git pull
 
 ## Cómo trabajar esta asignatura: el paso a paso
 
-En esta asignatura es muy importante conocer como evoluciona el código:
+En esta asignatura es muy importante conocer cómo evoluciona el código:
 
 - Haz **un commit por cada paso significativo** que completes en una práctica, no un único commit final con todo el código terminado.
 - Usa mensajes de commit claros, indicando bloque y práctica (ej. `B1-P1: añade función de xxxxx).
@@ -206,6 +206,6 @@ Si tienes dudas sobre cualquiera de estos comandos, repasa la guía de Git de m�
 
 ## Entrega
 
-Cuando finalices una práctica se te va a pedir que subas a Moodle el código final implementado. En github o gitlab puedes descargar una copia en zip del código. Súbela a Moodle.
+Cuando finalices una práctica, se te va a pedir que subas a Moodle el código final implementado. En github o gitlab puedes descargar una copia en zip del código. Súbela a Moodle.
 
 
