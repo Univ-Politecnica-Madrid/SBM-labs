@@ -1,7 +1,7 @@
 # Prácticas de Sistemas Basados en Microprocesador
 
-> **Este repositorio es un ejemplo.** Aquí puedes ver cómo se organiza un repositorio de prácticas y cómo se usa Git para desarrollarlas, tanto en GitHub como en GitLab. **No vas a trabajar directamente sobre este repositorio**: antes de empezar, crea tu propia copia siguiendo la sección **"Cómo obtener tu propio repositorio"** más abajo.
-Las prácticas de la asignatura se desarrollan en lenguaje  **C** sobre un microcontrolador, usando **Keil µVision** o **VS Code (CMSIS-Toolbox)**. Cada alumno trabaja en su propia copia de este repositorio (disponible como plantilla en GitHub), con la misma estructura.
+**Este repositorio es un template para organizar las prácticas de la asignatura de SBM en la ETSIS Telecomunicación del campus sur de la UPM.** Aquí puedes ver cómo se organiza el repositorio de prácticas y cómo se usa Git para desarrollarlas, tanto en GitHub como en GitLab. **No se trabaja directamente sobre este repositorio**: antes de empezar, crea tu propia copia siguiendo la sección **"Cómo obtener tu propio repositorio"** más abajo.
+Las prácticas de la asignatura se desarrollan en el lenguaje  **C** sobre un microcontrolador de STMicroelectronics, usando **Keil µVision** o **VS Code (CMSIS-Toolbox)**. Cada alumno trabaja en su propia copia de este repositorio (disponible como plantilla en GitHub), con la misma estructura.
 
 ## Estructura del repositorio
 
@@ -15,7 +15,7 @@ Cada bloque contiene una o varias prácticas (`P0`, `P1`, `P2`...). Cada prácti
 
 ## Organización de cada práctica
 
-Cada práctica sigue siempre la misma organización interna, pensada para que el mismo código en C se pueda compilar y probar tanto desde **Keil Vision** como desde **VS Code** (con el CMSIS-Toolbox de Arm), sin duplicar el código fuente (en el futuro está planeado utilizar VC debido a que Keil µVision va a dejar de actualizarse). Por ejemplo la P0 del B1 tiene esta organización:
+Cada práctica sigue siempre la misma organización interna, pensada para que el mismo código en C se pueda compilar y probar tanto en **Keil µVision** como en **VS Code** (con el CMSIS-Toolbox de Arm), sin duplicar el código fuente (en el futuro está planeado utilizar VS Code debido a que Keil µVision dejará de actualizarse). Por ejemplo la P0 del B1 tiene esta organización:
 
 ```
 P0/
@@ -29,8 +29,6 @@ P0/
 - **`keil/`**: contiene el proyecto para abrir y compilar con Keil Vision (MDK-ARM). El archivo principal del proyecto tiene la extensión `.uvprojx`.
 - **`vc/`**: contiene el proyecto para abrir y compilar en VS Code, usando la extensión de Arm CMSIS y el sistema de proyectos `csolution`/`cproject` (archivos `.csolution.yml` y `.cproject.yml`). 
 
-> Esta organización está inspirada en la usada en el repositorio [SBM-rtos](https://github.com/mruizglz/SBM-rtos), donde cada ejemplo separa el código común (`src/`) de la configuración específica de cada entorno (`keil/`, `vc/`).
-
 **Todas las prácticas de este repositorio (de cualquier bloque) deben seguir esta misma organización de carpetas.**
 
 ## Cómo obtener tu propio repositorio
@@ -39,8 +37,8 @@ Antes de tocar nada, necesitas tu propia copia de este repositorio, independient
 
 ### Si usas GitHub
 
-1. Entra en la página de este repositorio en GitHub.
-2. Pulsa el botón verde **"Use this template"** (arriba a la derecha) **"Create a new repository"**.
+1. Entra a la página de este repositorio en GitHub.
+2. Pulsa el botón verde **"Use this template"** (arriba a la derecha) y luego **"Create a new repository"**.
 3. Elige un nombre para tu repositorio (por ejemplo, `practicas-nombre-apellido`) y selecciona tu cuenta personal como propietaria.
 4. Pulsa **"Create repository"**.
 
@@ -53,15 +51,15 @@ Antes de tocar nada, necesitas tu propia copia de este repositorio, independient
 
 GitLab importará todo el contenido de este repositorio (carpetas, README, etc.) a tu nuevo proyecto, que será completamente independiente del original.
 
-En ambos casos, a partir de aquí trabajarás siempre sobre tu propia copia, nunca sobre este repositorio de ejemplo.
+En ambos casos, a partir de aquí trabajarás siempre en tu propia copia, nunca en este repositorio de ejemplo.
 
 ## Guía de Git para empezar desde cero
 
-Si nunca has usado Git, sigue esta guía paso a paso. Los comandos de Git son los mismos en GitHub y en GitLab (Git es la misma herramienta en los dos casos); solo cambia cómo se obtiene el repositorio y, en algún punto, la web donde generas tus credenciales. No necesitas memorizar nada: vuelve a esta sección cada vez que lo necesites.
+Si nunca has usado Git, sigue esta guía paso a paso. Los comandos de Git son los mismos en GitHub y en GitLab (Git es la misma herramienta en ambos casos); solo cambia cómo se obtiene el repositorio y, en algún punto, la web donde generas tus credenciales. No necesitas memorizar nada: vuelve a esta sección cada vez que lo necesites.
 
 ### 1. Instalar Git
 
-Descarga e instala Git desde [git-scm.com/downloads](https://git-scm.com/downloads) (Windows, macOS o Linux). Para comprobar que se ha instalado correctamente, abre una terminal y escribe:
+Descarga e instala Git desde [git-scm.com/downloads](https://git-scm.com/downloads) (Windows o Linux). Para comprobar que se ha instalado correctamente, abre una terminal y escribe:
 
 ```bash
 git --version
@@ -110,6 +108,7 @@ O, para añadir todos los cambios a la vez (cuidado con esto):
 ```bash
 git add .
 ```
+Ten la precaución de no añadir binarios ni ficheros temporales. 
 
 **c) Crea el commit**
 
@@ -206,6 +205,6 @@ Si tienes dudas sobre cualquiera de estos comandos, repasa la guía de Git de m�
 
 ## Entrega
 
-Cuando finalices una práctica, se te va a pedir que subas a Moodle el código final implementado. En github o gitlab puedes descargar una copia en zip del código. Súbela a Moodle.
+Cuando finalices una práctica, se te pedirá subir a Moodle el código final implementado. En github o gitlab puedes descargar una copia comprimida del código. Súbela a Moodle.
 
 
